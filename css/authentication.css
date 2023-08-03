@@ -1,0 +1,101 @@
+/* body{
+    background: linear-gradient(to left, #000000, rgb(52, 52, 52), #3c3c3c);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+} */
+.card{
+    width: 500px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4px;
+    font-size: 12px;
+}
+body{
+    height: 100vh;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),
+    rgba(46, 46, 47, 0.7)),url(/HousesImages/original-c145bf96160b3ef2f4626486a3722ba3.png);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.card h1{
+    color: #0f2027;
+    text-align: center;
+}
+label{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.card button{
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color:  #f64438;
+    font-weight: 600;
+    font-size: 18px;
+    background-color:  #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.card button:hover{
+    background-color:  #f74134;
+    color: black;
+    transition: 0.3s;
+}
+
+.input-control{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-control input{
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+
+}
+
+.signup {
+    display: flex;
+    justify-content: left;
+    font-weight: 600;
+}
+
+.signup p {
+    margin-right: 9px;
+    font-size: 16px;
+}
+
+.signup a {
+    font-size: 16px;
+    margin-top: 15px;
+    color: #dd2626;
+}
+
+.input-control input:focus{
+    outline: 1;
+}
+.input-control.success input{
+    border-color: green;
+}
+.input-control.error input{
+    border-color: red;
+}
+
+.input-control .error{
+    color: red;
+    font-size: 13px;
+    height: 13px;
+}
+
+@media (max-width:700px) {
+    .container{
+        padding: 20px;
+    }
+}

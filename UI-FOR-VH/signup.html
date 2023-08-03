@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/authentication.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fa-solid {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <form action="/" id="form" method="post">
+                <h1>Register</h1>
+                <div class="input-control">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="email">Email</label>
+                    <i id="loadingIcon" class="fa-solid fa-spinner fa-spin-pulse fa-2xl" style="color: #d51515;"></i>
+                    <input type="text" name="email" id="email">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                    <div class="error"></div>
+                </div>
+                <div class="input-control">
+                    <label for="password">Password Confirmation</label>
+                    <input type="password" name="password2" id="password2">
+                    <div class="error"></div>
+                </div>
+                <div class="signup">
+                    <p>Already have an account?</p>
+                    <a href="/UI-FOR-VH/login.html">Login</a>
+                </div>
+                <a href="/login.html"><button type="submit" >Sign Up</button></a>
+            </form>
+        </div>
+    </div>
+    <script src="/js/signup.js" ></script>
+</body>
+</html>

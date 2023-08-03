@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/css/video-home.css">
+  <link rel="stylesheet" href="/css/video-cards.css">
+  <title>Website Design</title>
+  <style>
+    .fa-solid {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 45px;
+    }
+    #loading{
+        display: flex;
+    }
+  </style>
+</head>
+<body>
+
+    <section class="">
+        <nav>
+            <div class="nav-links" id="navLinks">
+            <img src="/svg-folder/close.svg" height="30px" class="logo" onclick="hideMenu()">
+                <ul>
+                <li><a href="/UI-FOR-VH/video-home.html">HOME</a></li>
+                <li><a href="/UI-FOR-VH/createpost.html">CREATE POST</a></li>
+                <li><h5 id="username">USERNAME</h5></li>
+                <li><a href="/UI-FOR-VH/login.html"><span>LOGOUT</span></a></li>
+                </ul>
+            </div>
+            <img src="/svg-folder/menu.svg" height="30px" onclick="showMenu()" class="logo">
+        </nav>
+    </section>
+
+    <div class="gallery">
+        <i id="loading" class="fa-solid fa-spinner fa-spin-pulse fa-2xl" style="color: #d51515;"></i>
+
+        <div class="card">
+          <a href="/UI-FOR-VH/video-detail.html"><img src="/HousesImages/contact-us.jpg" alt="Image 1"></a>
+            <div class="card-caption">
+              <div class="title">This is a video ldfbdj image</div>
+              <div class="category">
+                <div>username</div>
+                <div  class="category-name">Category</div>
+              </div>
+            </div>
+        </div>
+    </div>
+    
+
+<!--Javascrip for the menu close-->
+<script>
+  let navLinks = document.getElementById('navLinks')
+
+  function showMenu(){
+      navLinks.style.left = '0'
+  }
+  function hideMenu(){
+      navLinks.style.left = '-200px'
+  }
+</script>
+
+
+<script src="/js/searched.js"></script>
+
+<script>
+  let userName = document.getElementById('username')
+  userName.innerHTML = localStorage.getItem('Username')
+</script>
+
+</body>
+</html>

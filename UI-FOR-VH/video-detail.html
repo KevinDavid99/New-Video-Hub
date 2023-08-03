@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/video-detail.css">
+  <title>Responsive Video Card</title>
+  <style>
+    #edit-post{
+      margin-right: 8px;
+      border-radius: 14px;
+      background-color: rgb(255, 255, 255);
+    }
+    .option{
+      margin-top: 16px;
+    }
+    .option a{
+      text-decoration: none;
+      color: black;
+      background-color: #ff1100;
+      padding: 5px;
+      border-radius: 24px;
+      font-weight: 500;
+    }
+    #username{
+      color: white;
+      font-weight: 100;
+    }
+    
+  </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-links" id="navLinks">
+          <img src="/svg-folder/close.svg" height="30px" class="logo" onclick="hideMenu()">
+            <ul>
+              <li><a href="/UI-FOR-VH/video-home.html">HOME</a></li>
+              <li><a href="/UI-FOR-VH/createpost.html">CREATE POST</a></li>
+              <li id="username">USERNAME</li>
+              <li><a href=""><span>LOGOUT</span></a></li>
+            </ul>
+        </div>
+        <img src="/svg-folder/menu.svg" height="30px" onclick="showMenu()" class="logo">
+    </nav>
+
+  <div class="video-card">
+
+  </div>
+
+
+<script>
+    let navLinks = document.getElementById('navLinks')
+
+    function showMenu(){
+        navLinks.style.left = '0'
+    }
+    function hideMenu(){
+        navLinks.style.left = '-200px'
+    }
+</script>
+
+<script src="/js/video-detail.js" ></script>
+
+<script>
+  let userName = document.getElementById('username')
+  userName.innerHTML = localStorage.getItem('Username')
+</script>
+
+</body>
+</html>
+
+</body>
+</html>

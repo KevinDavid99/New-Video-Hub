@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/createpost.css">
+    <link rel="stylesheet" href="/css/video-detail.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .fa-solid {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 45px;
+        }
+        #loading{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-links" id="navLinks">
+          <img src="/svg-folder/close.svg" height="30px" class="logo" onclick="hideMenu()">
+            <ul>
+              <li><a href="/UI-FOR-VH/video-home.html">HOME</a></li>
+              <li><a href="#">CREATE POST</a></li>
+              <li><a href="">USERNAME</a></li>
+              <li><a href=""><span>LOGOUT</span></a></li>
+            </ul>
+        </div>
+        <img src="/svg-folder/menu.svg" height="30px" onclick="showMenu()" class="logo">
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <form action="/" id="videoForm" method="post">
+                <h1>Create a post</h1>
+                <div class="input-control">
+                    <label for="image-upload">Image</label>
+                    <input type="file" name="image-upload" id="image-upload">
+                    <div class="error"></div>
+                </div>
+                <br><br>
+                <div class="input-control">
+                    <label for="video-upload">Video</label>
+                    <i id="loading" class="fa-solid fa-spinner fa-spin-pulse fa-2xl" style="color: #d51515;"></i>
+                    <input type="file" name="video-upload" id="video-upload">
+                    <div class="error"></div>
+                </div>
+                <br><br>
+                <div class="input-control">
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title">
+                    <div class="error"></div>
+                </div>
+                <br><br>
+                <div class="input-control">
+                    <label for="category" >Select Category</label>
+                      <div class="custom_select">
+                        <select id="categorylist">
+                          
+                        </select>
+                      </div>
+                  </div> 
+                <br><br>
+                <button type="submit">Upload</button>
+            </form>
+        </div>
+    </div>
+<script>
+    let navLinks = document.getElementById('navLinks')
+
+    function showMenu(){
+        navLinks.style.left = '0'
+    }
+    function hideMenu(){
+        navLinks.style.left = '-200px'
+    }
+</script>
+<script src="/js/video-update.js"></script>
+</body>
+</html>
