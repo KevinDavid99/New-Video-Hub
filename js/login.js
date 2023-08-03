@@ -92,7 +92,7 @@ formPage.addEventListener('submit', (e)=>{
         if(data.token!== 'undefined'){
             localStorage.getItem('Token')
         }
-        location.href = '/home.html'
+        location.href = '/video-home.html'
 
     })
     .catch((err)=> {
