@@ -6,8 +6,9 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
-    justify-items: center;
-    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .gallery img {
@@ -27,6 +28,7 @@
 .gallery .card {
     background-color: rgb(19, 19, 19);
     text-align: center;
+    width: 100%;
 }
 
 .gallery .card-caption {

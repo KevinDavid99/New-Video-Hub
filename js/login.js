@@ -105,6 +105,25 @@ formPage.addEventListener('submit', (e)=>{
     })
     }
 
+
+    fetch("https://videohubserversideapi.onrender.com/api/user/", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Token ${localStorage.getItem("Token")}`, // taking the authenticcated user toen to access all data
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        localStorage.setItem("UserId", data.id);
+        localStorage.setItem("Username", data.username);
+      })
+      .catch((err) => console.log(err));
+
+
+
+
     
 })
 

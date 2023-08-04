@@ -11,7 +11,7 @@ fetch('https://videohubserversideapi.onrender.com/api/post_items/', {
     return data.json()
     
 }).then(alldata =>{
-    let loadingmsg = document.getElementById('loadingmessage');
+    let loadingmsg = document.getElementById('loadingicon');
     if (alldata) {
         loadingmsg.style.display = 'none'
     }
@@ -144,19 +144,5 @@ btnCards.addEventListener('click', (e)=>{
 
 
 // })
-
-fetch('https://videohubserversideapi.onrender.com/api/user/', {
-    method : 'GET',
-    headers : {
-        'Content-Type': 'application/json',
-        'Authorization': `Token ${localStorage.getItem('Token')}`, // taking the authenticcated user toen to access all data
-    }
-}).then((response)=> response.json())
-.then((data)=>{
-    console.log(data);
-    localStorage.setItem('UserId', data.id)
-    localStorage.setItem('Username', data.username)
-}).catch((err)=> console.log(err))
-
 
 

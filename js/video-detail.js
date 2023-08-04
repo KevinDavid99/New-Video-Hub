@@ -17,6 +17,10 @@ if(video_id){
         return response.json()
     })
     .then((videoUrl)=>{
+        let loadingmsg = document.getElementById("loadicon");
+        if (videoUrl) {
+            loadingmsg.style.display = "none";
+        }
         if (videoUrl){
             const videodata = ''
             videoUrl.map((vid)=>{

@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="/css/video-detail.css">
   <title>Responsive Video Card</title>
   <style>
@@ -26,6 +29,20 @@
       color: white;
       font-weight: 100;
     }
+    .iconss{
+      margin-top: 156px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height:100px; 
+        overflow: hidden;
+    }
+    #loadicon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 45px;
+    }
     
   </style>
 </head>
@@ -36,13 +53,16 @@
             <ul>
               <li><a href="/video-home.html">HOME</a></li>
               <li><a href="/createpost.html">CREATE POST</a></li>
-              <li id="username">USERNAME</li>
+              <li id="username"><h3></h3></li>
               <li><a href="/logout.html"><span>LOGOUT</span></a></li>
             </ul>
         </div>
         <img src="/svg-folder/menu.svg" height="30px" onclick="showMenu()" class="logo">
     </nav>
 
+      <div class="iconss">
+        <i id="loadicon" class="fa-solid fa-spinner fa-spin-pulse fa-2xl" style="color: #d71010;"></i>
+      </div>
   <div class="video-card">
 
   </div>
