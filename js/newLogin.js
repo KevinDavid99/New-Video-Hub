@@ -64,10 +64,7 @@ formCard.addEventListener("submit", (e) => {
 
     fetch("https://videohubserversideapi.onrender.com/api/login/", {
       method: "POST",
-      body: loginForm,
-      headers: {
-        Authorization: `Token ${localStorage.getItem("Token")}`,
-      },
+      body: loginForm
     })
       .then((response) => {
         if (response.ok) {
