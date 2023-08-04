@@ -120,10 +120,6 @@ formPage.addEventListener('submit', (e)=>{
         localStorage.setItem("Username", data.username);
       })
       .catch((err) => console.log(err));
-
-
-
-
-    
+  
 })
 
